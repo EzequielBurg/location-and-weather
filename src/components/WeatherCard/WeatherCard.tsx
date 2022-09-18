@@ -51,7 +51,7 @@ export const WeatherCard = () => {
           </div>
         </>
       ) : (
-        <h3>Habilite a localização para visualizar as informações.</h3>
+        <h3 style={{margin: '2rem 0'}}>Habilite a localização para visualizar as informações.</h3>
       )}
 
       <button
