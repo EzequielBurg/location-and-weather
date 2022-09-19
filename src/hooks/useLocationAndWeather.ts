@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { WEATHER_API, WEATHER_API_KEY, WEATHER_API_LANG, WEATHER_API_UNITS } from '../utils';
+import { WEATHER_API, WEATHER_API_LANG, WEATHER_API_UNITS } from '../utils';
 
 type LocationData = {
 	latitude: number;
@@ -49,7 +49,7 @@ const useLocationAndWeather = () => {
 		if (locationData?.latitude && locationData.longitude)
 			fetch(
         `
-        ${WEATHER_API}?lat=${locationData.latitude}&lon=${locationData.longitude}&appid=${WEATHER_API_KEY}&lang=${WEATHER_API_LANG}&units=${WEATHER_API_UNITS}
+        ${WEATHER_API}?lat=${locationData.latitude}&lon=${locationData.longitude}&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&lang=${WEATHER_API_LANG}&units=${WEATHER_API_UNITS}
       `,
 			{method: 'GET'})
 				.then(res => res.json())

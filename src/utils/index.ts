@@ -1,7 +1,5 @@
 export const WEATHER_API='https://api.openweathermap.org/data/2.5/weather'
 
-export const WEATHER_API_KEY='4e1b45606a42fca56b7ec398887d7243'
-
 export const WEATHER_API_LANG='pt_br'
 
 export const WEATHER_API_UNITS='metric'
